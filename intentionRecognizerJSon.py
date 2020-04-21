@@ -7,9 +7,9 @@ import io
 import numpy as np
 
 def intentionRecognizerJson(archive):
-    
+
     pd.set_option('display.max_rows',157)
-    
+
     nlp = spacy.load('pt_core_news_sm')
     with open(archive, 'r') as myfile:
         data = myfile.read()
@@ -22,6 +22,8 @@ def intentionRecognizerJson(archive):
     explicitCounter = 0
     rightCounter = 0
 
+    print("Corretamente identificadas: ")
+    print()
     for phrase in range(0, len(df)):
         line = df.iloc[phrase,0].lower()
         processedLine = nlp(line)
@@ -34,7 +36,7 @@ def intentionRecognizerJson(archive):
         aumentar = False
         diminuir = False
 
-        if(df.iloc[phrase,1] == "explícito"):
+        if(df.iloc[phrase,1] == 'explicito'):
             explicitCounter = explicitCounter + 1
             for token in processedLine:
                 for name, synonymsList in dic.items():
@@ -59,42 +61,54 @@ def intentionRecognizerJson(archive):
                             diminuir = True
 
             for token in processedLine:
+                oldCounter = rightCounter
                 if (token.lemma_ in ['lâmpada', 'luz', 'luzir']):
                     if(desligar is True):
                         if(df.iloc[phrase,2] == "Apagar a lâmpada."):
                             rightCounter = rightCounter + 1
+                            break
                     elif(ligar is True):
                         if(df.iloc[phrase,2] == "Acender a lâmpada."):
                             rightCounter = rightCounter + 1
+                            break
 
                 elif (token.lemma_ == 'ventilador'):
                     if(desligar is True):
                         if(df.iloc[phrase,2] == "Desligar o ventilador."):
                             rightCounter = rightCounter + 1
+                            break
                 elif(ligar is True):
                         if(df.iloc[phrase,2] == "Ligar o ventilador."):
                             rightCounter = rightCounter + 1
+                            break
 
                 elif (token.lemma_ in ['televisão','tv','TV']):
                     if(ligar is True):
                         if(df.iloc[phrase,2] == "Ligar a televisão."):
                             rightCounter = rightCounter + 1
+                            break
                     elif(desligar is True):
                         if(df.iloc[phrase,2] == "Desligar a televisão."):
                             rightCounter = rightCounter + 1
+                            break
 
                 if (token.lemma_ in ['televisão', 'tv', 'canal', 'emissora']):
                     if(trocar is True):
                         if(df.iloc[phrase,2] == "Trocar de canal."):
                             rightCounter = rightCounter + 1
+                            break
                 if (token.lemma_ in ['televisão', 'tv', 'volume', 'som']):
                     if(aumentar is True):
                         if(df.iloc[phrase,2] == "Aumentar o volume."):
                             rightCounter = rightCounter + 1
+                            break
                     elif(diminuir is True):
                         if(df.iloc[phrase,2] == "Diminuir o volume."):
                             rightCounter = rightCounter + 1
-    
+                            break
+            if(rightCounter > oldCounter):
+                print(df.iloc[phrase,0])
+    print()
     print("Correct Counter: " + str(rightCounter))
     print("Explicit Counter: " + str(explicitCounter))
 
@@ -102,6 +116,7 @@ def intentionRecognizerJson(archive):
     coverage = rightCounter/len(df)
     fMeasure = (2*precision*coverage)/(precision+coverage)
 
+    print()
     print("Precision: " + str("{:1.2f}".format(precision)))
     print("Coverage: " + str("{:1.2f}".format(coverage)))
     print("F-Measure: " + str("{:1.2f}".format(fMeasure)))

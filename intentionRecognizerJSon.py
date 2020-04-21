@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import spacy
 import sys
 import json
@@ -7,7 +8,8 @@ import io
 import numpy as np
 
 def intentionRecognizerJson(archive):
-
+    correctlyIdentified = []
+    incorrectlyIdentified = []
     pd.set_option('display.max_rows',157)
 
     nlp = spacy.load('pt_core_news_sm')
@@ -41,74 +43,110 @@ def intentionRecognizerJson(archive):
             for token in processedLine:
                 for name, synonymsList in dic.items():
                     if(name in ['desligar', 'apagar']):
-                        if token.lemma_ in synonymsList or token.lemma_ == name:
+                        if token.lemma_ in ['diminuir', 'reduzir', 'abaixar']:
+                            pass
+                        elif token.lemma_ in synonymsList or token.lemma_ == name:
+                            print(token.lemma_)
                             desligar = True
+                            break
 
                     elif(name in ['acender', 'acionar', 'ativar', 'ligar']):
-                        if token.lemma_ in synonymsList or token.lemma_ == name:
+                        if token.lemma_ in ['aumentar', 'incrementar']:
+                            pass
+                        elif token.lemma_ in synonymsList or token.lemma_ == name:
+                            print(token.lemma_)
                             ligar = True
+                            break
 
                     elif(name in ['mudar', 'trocar']):
                         if token.lemma_ in synonymsList or token.lemma_ == name:
+                            print(token.lemma_)
                             trocar = True
+                            break
 
                     elif(name in ['aumentar', 'incrementar']):
-                        if token.lemma_ in synonymsList or token.lemma_ == name:
+                        if token.lemma_ in ['acender', 'acionar', 'ativar', 'ligar']:
+                            pass
+                        elif token.lemma_ in synonymsList or token.lemma_ == name:
+                            print(token.lemma_)
                             aumentar = True
+                            break
 
-                    elif(name in ['diminuir', 'reduzir']):
-                        if token.lemma_ in synonymsList or token.lemma_ == name:
+                    elif(name in ['diminuir', 'reduzir', 'abaixar']):
+                        if token.lemma_ in ['desligar', 'apagar']:
+                            pass
+                        elif token.lemma_ in synonymsList or token.lemma_ == name:
+                            print(token.lemma_)
                             diminuir = True
+                            break
+            print(processedLine)
 
+            oldCounter = rightCounter
             for token in processedLine:
-                oldCounter = rightCounter
-                if (token.lemma_ in ['lâmpada', 'luz', 'luzir']):
+                if (token.lemma_ in ['lampada', 'luz', 'luzir']):
+                    print(desligar, ligar, token.lemma_)
                     if(desligar is True):
-                        if(df.iloc[phrase,2] == "Apagar a lâmpada."):
+                        if(df.iloc[phrase,2] == 'Apagar a lampada.'):
                             rightCounter = rightCounter + 1
                             break
                     elif(ligar is True):
-                        if(df.iloc[phrase,2] == "Acender a lâmpada."):
+                        if(df.iloc[phrase,2] == 'Acender a lampada.'):
                             rightCounter = rightCounter + 1
                             break
 
                 elif (token.lemma_ == 'ventilador'):
+                    print(desligar, ligar, token.lemma_)
                     if(desligar is True):
-                        if(df.iloc[phrase,2] == "Desligar o ventilador."):
+                        if(df.iloc[phrase,2] == 'Desligar o ventilador.'):
                             rightCounter = rightCounter + 1
                             break
-                elif(ligar is True):
-                        if(df.iloc[phrase,2] == "Ligar o ventilador."):
+                    elif(ligar is True):
+                        if(df.iloc[phrase,2] == 'Ligar o ventilador.'):
                             rightCounter = rightCounter + 1
                             break
 
-                elif (token.lemma_ in ['televisão','tv','TV']):
+                elif (token.lemma_ in ['televisao','tv','TV']):
+                    print(desligar, ligar, token.lemma_)
                     if(ligar is True):
-                        if(df.iloc[phrase,2] == "Ligar a televisão."):
+                        if(df.iloc[phrase,2] == 'Ligar a televisao.'):
                             rightCounter = rightCounter + 1
                             break
                     elif(desligar is True):
-                        if(df.iloc[phrase,2] == "Desligar a televisão."):
+                        if(df.iloc[phrase,2] == 'Desligar a televisao.'):
                             rightCounter = rightCounter + 1
                             break
 
-                if (token.lemma_ in ['televisão', 'tv', 'canal', 'emissora']):
+                if (token.lemma_ in ['televisao', 'tv', 'canal', 'emissora']):
+                    print(trocar, token.lemma_)
                     if(trocar is True):
-                        if(df.iloc[phrase,2] == "Trocar de canal."):
+                        if(df.iloc[phrase,2] == 'Trocar de canal.'):
                             rightCounter = rightCounter + 1
                             break
-                if (token.lemma_ in ['televisão', 'tv', 'volume', 'som']):
+                if (token.lemma_ in ['televisao', 'tv', 'volume', 'som']):
+                    print(aumentar, diminuir, token.lemma_)
                     if(aumentar is True):
-                        if(df.iloc[phrase,2] == "Aumentar o volume."):
+                        if(df.iloc[phrase,2] == 'Aumentar o volume.'):
                             rightCounter = rightCounter + 1
                             break
                     elif(diminuir is True):
-                        if(df.iloc[phrase,2] == "Diminuir o volume."):
+                        if(df.iloc[phrase,2] == 'Diminuir o volume.'):
                             rightCounter = rightCounter + 1
                             break
+
             if(rightCounter > oldCounter):
-                print(df.iloc[phrase,0])
+                correctlyIdentified.append(df.iloc[phrase,0])
+            else:
+                incorrectlyIdentified.append(df.iloc[phrase,0])
+
+            print()
+    print(correctlyIdentified)
     print()
+
+
+    print("Incorretamente identificadas: ")
+    print(incorrectlyIdentified)
+    print()
+
     print("Correct Counter: " + str(rightCounter))
     print("Explicit Counter: " + str(explicitCounter))
 

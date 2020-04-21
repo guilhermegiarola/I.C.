@@ -1,16 +1,16 @@
 Frase;Implicito/Explicito;Funcionalidade Desejada
 
-Tá mó escuro aqui;implicito;Acender a lâmpada.
+Tá mó escuro aqui;implicito;Acender a lampada.
 
-Não to enxergando nada;implicito;Acender a lâmpada.
+Não to enxergando nada;implicito;Acender a lampada.
 
-Acende a luz ai;explicito;Acender a lâmpada.
+Acende a luz ai;explicito;Acender a lampada.
 
-Apaga a luz ai;explicito;Apagar a lâmpada.
+Apaga a luz ai;explicito;Apagar a lampada.
 
-Tá mó claro aqui;implicito;Apagar a lâmpada.
+Tá mó claro aqui;implicito;Apagar a lampada.
 
-Não consigo dormir de luz acessa;implicito;Apagar a lâmpada.
+Não consigo dormir de luz acessa;implicito;Apagar a lampada.
 
 Tá mó calor aqui;implicito;Ligar o ventilador.
 
@@ -24,17 +24,17 @@ Tá ventando demais;implicito;Desligar o ventilador.
 
 Desliga o ventilador ai;explicito;Desligar o ventilador.
 
-To afim de assistir televisão;implicito;Ligar a televisão.
+To afim de assistir televisao;implicito;Ligar a televisao.
 
-Bora ligar a tv;explicito;Ligar a televisão.
+Bora ligar a tv;explicito;Ligar a televisao.
 
-Liga a televisão ai;explicito;Ligar a televisão.
+Liga a televisao ai;explicito;Ligar a televisao.
 
-Não consigo estudar com a televisão ligada;implicito;Desligar a televisão.
+Não consigo estudar com a televisao ligada;implicito;Desligar a televisao.
 
-A tv ta ligada atoa;implicito;Desligar a televisão.
+A tv ta ligada atoa;implicito;Desligar a televisao.
 
-Alguém desliga essa televisão;explicito;Desligar a televisão.
+Alguém desliga essa televisao;explicito;Desligar a televisao.
 
 Não to escutando nada;implicito;Aumentar o volume.
 
@@ -42,7 +42,7 @@ Esse volume tá muito baixo;implicito;Aumentar o volume.
 
 Aumenta a tv ai;explicito;Aumentar o volume.
 
-Essa televisão ta muito alta;implicito;Diminuir o volume.
+Essa televisao ta muito alta;implicito;Diminuir o volume.
 
 Vou atender o telefone, diminui o volume ai;explicito;Diminuir o volume.
 
@@ -50,23 +50,23 @@ Esse barulho tá me incomodando;implicito;Diminuir o volume.
 
 Eu não gosto desse programa;implicito;Trocar de canal.
 
-O jogo vai começar agora, muda o canal ai;explicito;Trocar de canal.
+O jogo vai comecar agora, muda o canal ai;explicito;Trocar de canal.
 
 Não gosto desse canal;implicito;Trocar de canal.
 
-Hum, tá muito escuro aqui.;implicito;Acender a lâmpada.
+Hum, tá muito escuro aqui.;implicito;Acender a lampada.
 
-Não to vendo nada.;implicito;Acender a lâmpada.
+Não to vendo nada.;implicito;Acender a lampada.
 
-Acende a luz.;explicito;Acender a lâmpada.
+Acende a luz.;explicito;Acender a lampada.
 
-Ta meio escuro.;implicito;Acender a lâmpada.
+Ta meio escuro.;implicito;Acender a lampada.
 
-Apaga a luz ai.;explicito;Apagar a lâmpada.
+Apaga a luz ai.;explicito;Apagar a lampada.
 
-Ta muito claro.;implicito;Apagar a lâmpada.
+Ta muito claro.;implicito;Apagar a lampada.
 
-Minha vista ta doendo com essa claridade.;implicito;Apagar a lâmpada.
+Minha vista ta doendo com essa claridade.;implicito;Apagar a lampada.
 
 Ta bem quente aqui.;implicito;Ligar o ventilador.
 
@@ -80,17 +80,17 @@ Já refrescou bem.;implicito;Desligar o ventilador.
 
 Desliga o ventilador ai.;explicito;Desligar o ventilador.
 
-Será que tem algo de bom na tv ?;implicito;Ligar a televisão.
+Será que tem algo de bom na tv ?;implicito;Ligar a televisao.
 
-Quero ver tv.;implicito;Ligar a televisão.
+Quero ver tv.;implicito;Ligar a televisao.
 
-Liga a tv, por favor.;explicito;Ligar a televisão.
+Liga a tv, por favor.;explicito;Ligar a televisao.
 
-Ta chato essa tv já.;implicito;Desligar a televisão.
+Ta chato essa tv já.;implicito;Desligar a televisao.
 
-Desliga a tv.;explicito;Desligar a televisão.
+Desliga a tv.;explicito;Desligar a televisao.
 
-Não quero mais ver tv.;implicito;Desligar a televisão.
+Não quero mais ver tv.;implicito;Desligar a televisao.
 
 Não to ouvindo nada.;implicito;Aumentar o volume.
 
@@ -108,15 +108,15 @@ Que canal chato.;implicito;Trocar de canal.
 
 Troca o canal ai.;explicito;Trocar de canal.
 
-To vendo nada!;implicito;Apagar a lâmpada.
+To vendo nada!;implicito;Apagar a lampada.
 
 Que calor, deus.;implicito;Ligar o ventilador.
 
 Grr, esfriou bastante em!;implicito;Desligar o ventilador.
 
-Será que tem algo interessante na tv?;implicito;Ligar a televisão.
+Será que tem algo interessante na tv?;implicito;Ligar a televisao.
 
-Ta passando nada de bom aqui!;implicito;Desligar a televisão.
+Ta passando nada de bom aqui!;implicito;Desligar a televisao.
 
 Que? to ouvindo nada nesta tv.;implicito;Aumentar o volume.
 
@@ -124,25 +124,25 @@ Esse volume ta muito baixo;implicito;Aumentar o volume.
 
 Que?? A tv não deixa eu te ouvir!;implicito;Diminuir o volume.
 
-Que escuridão;implicito;Acender a lâmpada.
+Que escuridão;implicito;Acender a lampada.
 
-Ta claro demais para dormir;implicito;Apagar a lâmpada.
+Ta claro demais para dormir;implicito;Apagar a lampada.
 
-A ventilação aqui esta horrível;implicito;Ligar o ventilador.
+A ventilacão aqui esta horrivel;implicito;Ligar o ventilador.
 
 Esse canal não esta legal;implicito;Trocar de canal.
 
-To enxergando nada;implicito;Acender a lâmpada.
+To enxergando nada;implicito;Acender a lampada.
 
 Que friiiiio!!!;implicito;Desligar o ventilador.
 
-Bom, vou ir dormir!;implicito;Desligar a televisão.
+Bom, vou ir dormir!;implicito;Desligar a televisao.
 
-Esse programa é chato.;implicito;Desligar a televisão.
+Esse programa é chato.;implicito;Desligar a televisao.
 
-Cansei de tv por hoje!;implicito;Desligar a televisão.
+Cansei de tv por hoje!;implicito;Desligar a televisao.
 
-Vou assistir tv agora!;implicito;Ligar a televisão.
+Vou assistir tv agora!;implicito;Ligar a televisao.
 
 Preciso abaixar o volume;explicito;Diminuir o volume.
 
@@ -160,19 +160,19 @@ O volume esta alto;implicito;Diminuir o volume.
 
 Estou derretendo de calor;implicito;Ligar o ventilador.
 
-Quero assistir um filme;implicito;Ligar a televisão.
+Quero assistir um filme;implicito;Ligar a televisao.
 
-Tá escuro!;implicito;Acender a lâmpada.
+Tá escuro!;implicito;Acender a lampada.
 
-Acende a luz!;explicito;Acender a lâmpada.
+Acende a luz!;explicito;Acender a lampada.
 
-Luz, por favor!;implicito;Acender a lâmpada.
+Luz, por favor!;implicito;Acender a lampada.
 
-Apague essa luz!;explicito;Apagar a lâmpada.
+Apague essa luz!;explicito;Apagar a lampada.
 
-Apagar luzes!;explicito;Apagar a lâmpada.
+Apagar luzes!;explicito;Apagar a lampada.
 
-Desligar luzes!;explicito;Apagar a lâmpada.
+Desligar luzes!;explicito;Apagar a lampada.
 
 Está muito quente aqui!;implicito;Ligar o ventilador.
 
@@ -186,17 +186,17 @@ Ventilador, desligar!;explicito;Desligar o ventilador.
 
 Está frio! Desliga o ventilador!;explicito;Desligar o ventilador.
 
-Quero ver televisão!;implicito;Ligar a televisão.
+Quero ver televisao!;implicito;Ligar a televisao.
 
-Liga a TV!;explicito;Ligar a televisão.
+Liga a TV!;explicito;Ligar a televisao.
 
-TV, ligar!;explicito;Ligar a televisão.
+TV, ligar!;explicito;Ligar a televisao.
 
-Cansei de TV por hoje!;implicito;Desligar a televisão.
+Cansei de TV por hoje!;implicito;Desligar a televisao.
 
-Não quero mais ver televisão!;implicito;Desligar a televisão.
+Não quero mais ver televisao!;implicito;Desligar a televisao.
 
-Desligar a TV!;explicito;Desligar a televisão.
+Desligar a TV!;explicito;Desligar a televisao.
 
 Aumente o volume!;explicito;Aumentar o volume.
 
@@ -216,15 +216,15 @@ Mude de canal!;explicito;Trocar de canal.
 
 Não quero ver esse canal!;implicito;Trocar de canal.
 
-Tá escuro demais, não consigo ver nada.;implicito;Acender a lâmpada.
+Tá escuro demais, não consigo ver nada.;implicito;Acender a lampada.
 
-Acende a lâmpada aí por favor?;explicito;Acender a lâmpada.
+Acende a lampada ai por favor?;explicito;Acender a lampada.
 
-Não consigo ler, tá escuro aqui.;implicito;Acender a lâmpada.
+Não consigo ler, tá escuro aqui.;implicito;Acender a lampada.
 
-Tá muito claro, não consigo dormir.;implicito;Apagar a lâmpada.
+Tá muito claro, não consigo dormir.;implicito;Apagar a lampada.
 
-Essa luz tá me atrapalhando a ver.;implicito;Apagar a lâmpada.
+Essa luz tá me atrapalhando a ver.;implicito;Apagar a lampada.
 
 Tá muito calor aqui.;implicito;Ligar o ventilador.
 
@@ -238,15 +238,15 @@ Tá frio demais aqui.;implicito;Desligar o ventilador.
 
 Esse vento tá me atrapalhando a ler.;implicito;Desligar o ventilador.
 
-Ligar a televisão.;explicito;Ligar a televisão.
+Ligar a televisao.;explicito;Ligar a televisao.
 
-Por que a TV ainda tá desligada?;implicito;Ligar a televisão.
+Por que a TV ainda tá desligada?;implicito;Ligar a televisao.
 
-Quero ver as notícias, liga a TV?;explicito;Ligar a televisão.
+Quero ver as noticias, liga a TV?;explicito;Ligar a televisao.
 
-Cansei de assistir, vou fazer outra coisa.;implicito;Desligar a televisão.
+Cansei de assistir, vou fazer outra coisa.;implicito;Desligar a televisao.
 
-Estou com sono, vou desligar a TV.;explicito;Desligar a televisão.
+Estou com sono, vou desligar a TV.;explicito;Desligar a televisao.
 
 Não tô entendendo o que estão falando na TV.;implicito;Aumentar o volume.
 
@@ -266,17 +266,17 @@ Não sei por que ainda tô assistindo isso.;implicito;Trocar de canal.
 
 Esse canal tá muito ruim.;implicito;Trocar de canal.
 
-Acenda a luz.;explicito;Acender a lâmpada.
+Acenda a luz.;explicito;Acender a lampada.
 
-Por favor, ligue a luz.;explicito;Acender a lâmpada.
+Por favor, ligue a luz.;explicito;Acender a lampada.
 
-Esta escuro, poderia acender a luz.;explicito;Acender a lâmpada.
+Esta escuro, poderia acender a luz.;explicito;Acender a lampada.
 
-Desligue a luz.;explicito;Apagar a lâmpada.
+Desligue a luz.;explicito;Apagar a lampada.
 
-Esta muito claro.;implicito;Apagar a lâmpada.
+Esta muito claro.;implicito;Apagar a lampada.
 
-Chega de luz, apague.;explicito;Apagar a lâmpada.
+Chega de luz, apague.;explicito;Apagar a lampada.
 
 Ligue o ventilador.;explicito;Ligar o ventilador.
 
@@ -290,47 +290,47 @@ Chega desse vento.;implicito;Desligar o ventilador.
 
 Esse ventilador está me incomodando.;implicito;Desligar o ventilador.
 
-Ligue a televisão.;explicito;Ligar a televisão.
+Ligue a televisao.;explicito;Ligar a televisao.
 
-Quero assitir algo, uma TV seria bom.;implicito;Ligar a televisão.
+Quero assitir algo, uma TV seria bom.;implicito;Ligar a televisao.
 
-Seria bom um filme em.;implicito;Ligar a televisão.
+Seria bom um filme em.;implicito;Ligar a televisao.
 
-Desligue a televisão.;explicito;Desligar a televisão.
+Desligue a televisao.;explicito;Desligar a televisao.
 
-Cansei de assistir TV.;implicito;Desligar a televisão.
+Cansei de assistir TV.;implicito;Desligar a televisao.
 
-Ta dificil me concentrar com essa TV ligada.;implicito;Desligar a televisão.
+Ta dificil me concentrar com essa TV ligada.;implicito;Desligar a televisao.
 
-Aumente o volume da televisão.;explicito;Aumentar o volume.
+Aumente o volume da televisao.;explicito;Aumentar o volume.
 
 Não to ouvindo nada da TV.;implicito;Aumentar o volume.
 
 Da pra subir o volume ai.;implicito;Aumentar o volume.
 
-Diminua o volume da televisão.;explicito;Diminuir o volume.
+Diminua o volume da televisao.;explicito;Diminuir o volume.
 
 Ta muito alto essa TV.;implicito;Diminuir o volume.
 
 Não tem ninguém surdo aqui, pra que esse volume todo ?;implicito;Diminuir o volume.
 
-Troque o canal da televisão.;explicito;Trocar de canal.
+Troque o canal da televisao.;explicito;Trocar de canal.
 
 Já cansei de ver isso.;implicito;Trocar de canal.
 
 Que tal um canal de esporte.;implicito;Trocar de canal.
 
-Ligar luz;explicito;Acender a lâmpada.
+Ligar luz;explicito;Acender a lampada.
 
-Ligar a luz;explicito;Acender a lâmpada.
+Ligar a luz;explicito;Acender a lampada.
 
-Iluminar o ambiente;implicito;Acender a lâmpada.
+Iluminar o ambiente;implicito;Acender a lampada.
 
-Já está claro o dia!;implicito;Apagar a lâmpada.
+Já está claro o dia!;implicito;Apagar a lampada.
 
-Vamos economizar energia?;implicito;Apagar a lâmpada.
+Vamos economizar energia?;implicito;Apagar a lampada.
 
-Casa, apague a luz;explicito;Apagar a lâmpada.
+Casa, apague a luz;explicito;Apagar a lampada.
 
 O ar está muito parado;implicito;Ligar o ventilador.
 
@@ -344,23 +344,23 @@ Já chega de ventilador;implicito;Desligar o ventilador.
 
 desligue o ventilador;explicito;Desligar o ventilador.
 
-quero ver tv;implicito;Ligar a televisão.
+quero ver tv;implicito;Ligar a televisao.
 
-ligue a tv;explicito;Ligar a televisão.
+ligue a tv;explicito;Ligar a televisao.
 
-tv, ligar;explicito;Ligar a televisão.
+tv, ligar;explicito;Ligar a televisao.
 
-Agora vou dormir, desligue a tv;explicito;Desligar a televisão.
+Agora vou dormir, desligue a tv;explicito;Desligar a televisao.
 
-Tchau tv;implicito;Desligar a televisão.
+Tchau tv;implicito;Desligar a televisao.
 
-Tv, desligue;explicito;Desligar a televisão.
+Tv, desligue;explicito;Desligar a televisao.
 
 Não consigo ouvir;implicito;Aumentar o volume.
 
 Que barulho! Não consigo ouvir a tv;implicito;Aumentar o volume.
 
-televisão fale mais alto!;implicito;Aumentar o volume.
+televisao fale mais alto!;implicito;Aumentar o volume.
 
 Silêncio!;implicito;Diminuir o volume.
 
@@ -372,4 +372,4 @@ Que filme chato! Troque pra mim?;implicito;Trocar de canal.
 
 Trocar canal;explicito;Trocar de canal.
 
-Escolher outra programação;implicito;Trocar de canal.
+Escolher outra programacão;implicito;Trocar de canal.

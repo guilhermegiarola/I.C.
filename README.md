@@ -1,9 +1,7 @@
 # README
-
-
 # Dependencies
 
-This code requires Python, numpy, Pandas and spaCy. If you already have Python and pip, you can get numpy, Pandas and spaCy via:
+This code requires Python3, numpy, Pandas and spaCy. If you already have Python3 and pip, you can get numpy, Pandas and spaCy via:
 ```
 pip install numpy
 pip install pandas

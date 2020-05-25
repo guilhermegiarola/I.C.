@@ -7,17 +7,19 @@ import re
 import io
 import numpy as np
 
+#Função a qual gerencia o reconhecedor de intenções.
 def intentionRecognizerJson(archive):
     correctlyIdentified = []
     incorrectlyIdentified = []
     pd.set_option('display.max_rows',157)
 
+    #Gerencia o arquivo a ser utilizado para leitura das frases.
     nlp = spacy.load('pt_core_news_sm')
     with open(archive, 'r') as myfile:
         data = myfile.read()
         df = pd.read_csv(io.StringIO(re.sub('"\s*\n','"',data)), delimiter=';')
 
-    for col in df.columns: #To replace all line breaks in all textual columns
+    for col in df.columns:
         if df[col].dtype == np.object_:
             df[col] = df[col].str.replace('\n','')
 
@@ -38,15 +40,16 @@ def intentionRecognizerJson(archive):
         aumentar = False
         diminuir = False
 
+        #Verifica se a intenção denotada na segunda coluna do arquivo é "explícita".
         if(df.iloc[phrase,1] == 'explicito'):
             explicitCounter = explicitCounter + 1
+            #Gerencia as flags criadas acima, para que se verifique o que deve ser feito pelo reconhecedor.
             for token in processedLine:
                 for name, synonymsList in dic.items():
                     if(name in ['desligar', 'apagar']):
                         if token.lemma_ in ['diminuir', 'reduzir', 'abaixar']:
                             pass
                         elif token.lemma_ in synonymsList or token.lemma_ == name:
-                            print(token.lemma_)
                             desligar = True
                             break
 
@@ -54,13 +57,11 @@ def intentionRecognizerJson(archive):
                         if token.lemma_ in ['aumentar', 'incrementar']:
                             pass
                         elif token.lemma_ in synonymsList or token.lemma_ == name:
-                            print(token.lemma_)
                             ligar = True
                             break
 
                     elif(name in ['mudar', 'trocar']):
                         if token.lemma_ in synonymsList or token.lemma_ == name:
-                            print(token.lemma_)
                             trocar = True
                             break
 
@@ -68,7 +69,6 @@ def intentionRecognizerJson(archive):
                         if token.lemma_ in ['acender', 'acionar', 'ativar', 'ligar']:
                             pass
                         elif token.lemma_ in synonymsList or token.lemma_ == name:
-                            print(token.lemma_)
                             aumentar = True
                             break
 
@@ -76,12 +76,11 @@ def intentionRecognizerJson(archive):
                         if token.lemma_ in ['desligar', 'apagar']:
                             pass
                         elif token.lemma_ in synonymsList or token.lemma_ == name:
-                            print(token.lemma_)
                             diminuir = True
                             break
-            print(processedLine)
 
             oldCounter = rightCounter
+            #Verifica qual dos objetos é passível de se exercer uma função sobre, e sua presença na frase.
             for token in processedLine:
                 if (token.lemma_ in ['lampada', 'luz', 'luzir']):
                     print(desligar, ligar, token.lemma_)
@@ -142,7 +141,7 @@ def intentionRecognizerJson(archive):
     print(correctlyIdentified)
     print()
 
-
+    #Impressão de dados sobre o desempenho do reconhecedor.
     print("Incorretamente identificadas: ")
     print(incorrectlyIdentified)
     print()
